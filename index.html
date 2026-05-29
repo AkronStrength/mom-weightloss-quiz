@@ -512,6 +512,18 @@
 
   .traits li:last-child { border-bottom: none; }
 
+  .method-bridge {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(0,153,180,0.06));
+    border-left: 3px solid var(--gold);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 0.97rem;
+    line-height: 1.7;
+    color: var(--black);
+    font-style: italic;
+  }
+
   .trait-dot {
     width: 6px;
     height: 6px;
@@ -723,7 +735,8 @@ const results = {
       "Feels guilty resting, even when her body is screaming for it"
     ],
     action: "This week, protect ONE non-negotiable 30-minute window for yourself — no negotiating. Not for a workout. Just for you to breathe, move, or exist without serving someone else. This alone starts resetting your nervous system, which is the first domino in fat loss.",
-    emoji: "🔥"
+    emoji: "🔥",
+    methodBridge: `The Lean Mom Method™ was built for exactly where you are right now. We meet you in your exhaustion — not with more demands, but with a system personalized to your body, your hormones, and your life — so that you can finally stop running on empty and start feeling like yourself again, with energy left over for the people you love most.`
   },
   allornothing: {
     type: "all-or-nothing",
@@ -739,7 +752,8 @@ const results = {
       "Has more knowledge than most people — but can't translate it into consistent action"
     ],
     action: "This week, practice the '80% rule': aim to be on track 4 out of 5 days — and plan one off-plan moment intentionally. Give yourself permission to be imperfect and keep going. This breaks the spiral before it starts.",
-    emoji: "⚡"
+    emoji: "⚡",
+    methodBridge: `The Lean Mom Method™ is designed around your real life, not a perfect version of it. We build your plan specifically around the moments that used to derail you — so that one off night, one busy week, or one birthday party never has to mean starting over again. You'll finally have a system that bends without breaking, so you can keep making progress no matter what life throws at you.`
   },
   winging: {
     type: "winging-it",
@@ -755,7 +769,8 @@ const results = {
       "Craves clarity and simplicity — not another complicated plan to figure out"
     ],
     action: "This week, pick ONE anchor habit and do it every single day — no matter what. Something small and specific: a 20-minute walk, hitting a protein goal, drinking water before coffee. Consistency with one thing builds the confidence to add the next.",
-    emoji: "🗺️"
+    emoji: "🗺️",
+    methodBridge: `The Lean Mom Method™ gives you the clarity and structure your body has been waiting for — a plan built specifically around your schedule, your food, and your life after 30 — so that you stop second-guessing every decision and start seeing real, consistent results for the first time.`
   }
 };
 
@@ -874,6 +889,10 @@ function showResult() {
         <div class="action-box">
           <div class="action-box-label">✦ Your One Action This Week</div>
           <p>${r.action}</p>
+        </div>
+
+        <div class="method-bridge">
+          <p>${r.methodBridge}</p>
         </div>
 
         <div class="result-divider"></div>
